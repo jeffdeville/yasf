@@ -1,6 +1,6 @@
 require 'active_support/all'
 require 'capybara/poltergeist'
-
+require 'faraday'
 require 'yasf/version'
 require 'yasf/web_socket'
 
@@ -10,8 +10,13 @@ module Yasf
   autoload :Parser,         'yasf/parser'
   autoload :Parseable,      'yasf/parseable'
   autoload :Session,        'yasf/session'
+  autoload :HttpSession,    'yasf/http_session'
+  autoload :CapybaraFaradayAdapter, 'yasf/capybara_faraday_adapter'
   autoload :Configuration,  'yasf/configuration'
 
+  Faraday::Adapter.register_middleware(
+    :capybara => lambda { Yasf::CapybaraFaradayAdapter }
+  )
   class << self
 
     def configure

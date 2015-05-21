@@ -17,7 +17,7 @@ module Yasf
 
     def document
       Nokogiri::HTML(
-        Session.new(@metadata.url).html
+        HttpSession.new(@metadata.url).html
       )
     end
 

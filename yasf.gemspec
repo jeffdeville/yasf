@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   # Runtime
   spec.add_runtime_dependency 'capybara', '~> 2.4'
   spec.add_runtime_dependency 'poltergeist', '~> 1.6'
-
+  spec.add_runtime_dependency 'faraday', '~> 0.9'
   spec.add_runtime_dependency 'nokogiri', '~> 1.6'
   spec.add_runtime_dependency 'activesupport', '~> 4.2'
 

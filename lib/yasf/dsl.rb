@@ -100,6 +100,9 @@ module Yasf
       def base_url(url)
         @url = url
       end
+      def base_url=(url)
+        @url = url
+      end
 
       def parse(context)
         properties.each do |property|

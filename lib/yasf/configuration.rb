@@ -6,6 +6,7 @@ module Yasf
     config_accessor :proxy_port
     config_accessor :timeout
     config_accessor :debug
+    config_accessor :http_client
     config_accessor :capybara_driver
     config_accessor :capybara_driver_options
 
